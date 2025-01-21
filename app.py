@@ -8,11 +8,11 @@ movies = pd.DataFrame(movies_dict)
 similarity = pickle.load(open('similarity.pkl','rb'))
 
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=1ceb7c357d484b08ab00b89bf73d76d6&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key={}&language=en-US".format(movie_id)
 
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxY2ViN2MzNTdkNDg0YjA4YWIwMGI4OWJmNzNkNzZkNiIsIm5iZiI6MTcwNDk3MjU4OC4xNzQsInN1YiI6IjY1OWZkMTJjOTA3ZjI2MDEyNTIwZWJhYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YGFfrwGAfe2GkKUJpfdvUgnc9AoogkT8c3pWRIyoo1w"
+        "Authorization": ""
     }
 
     response = requests.get(url, headers=headers)
